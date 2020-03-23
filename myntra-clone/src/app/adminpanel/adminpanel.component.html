@@ -1,0 +1,14 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6" style="border-right: 1px solid black;">
+      <h1 class="display-2 text-center text-danger">{{ordersServiceObj.getTotalPendingOrders()}}</h1>
+      <h3 class="text-center">All Pending Orders</h3>
+    </div>
+    <div class="col-md-6" style="border-left: 1px solid black;">
+      <h1 class="display-2 text-center text-primary">{{ordersServiceObj.getTotalOrders()}}</h1>
+      <h3 class="text-center">Total Orders</h3>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

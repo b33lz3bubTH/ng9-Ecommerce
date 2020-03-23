@@ -1,0 +1,9 @@
+<div class="container-fluid text-center">
+    <p class="display-4">Total Price: {{ cartObj.getTotalMoney() | currency:'INR':'symbol-narrow'}} </p>
+</div>
+<div class="container text-center" *ngIf="!cartObj.cartDB.length">
+    <h1>You have nothing in your Cart</h1>
+</div>
+<div class="container" *ngIf="cartObj.cartDB.length">
+    <button (click)="placeOrder()" class="w-100 btn btn-outline-primary btn-lg"><i class="fas fa-shopping-cart"></i> Payment&palce</button>
+</div>

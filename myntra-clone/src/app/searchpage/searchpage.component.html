@@ -1,0 +1,12 @@
+<div class="container">
+    <h3 class="my-3 mx-2"> Showing search results for: <i>{{ searchTerm }}</i></h3>
+    <div class="card-deck">
+        <app-product
+        *ngFor="let x of pdb"
+        [element]="x"
+        ></app-product>
+    </div>
+</div>
+<div class="container text-danger" *ngIf="!pdb.length">
+    <h4>No Item Found, search somthing else :p</h4>
+</div>

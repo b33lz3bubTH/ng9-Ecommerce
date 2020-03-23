@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <h1 class="display-4">All your Prev Orders</h1>
+    <h1 class="display-5" *ngIf="!allOrdersObj.length">No Orders Bro... Go buy somthing</h1>
+</div>
+<hr class="w-75">
+<div class="container">
+    <div class="row my-2" *ngFor="let x of allOrdersObj">
+        <div class="col-sm-2">
+            <img [src]="x.imgPath" class="w-100">
+        </div>
+        <div class="col-sm-10">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Product: {{x.name}}</h5>
+                  <p class="card-text">Price: {{x.price | currency:'INR':'symbol-narrow'}}</p>
+                  <p class="card-text">Quantity: {{x.quantity}}</p>
+                  <p class="card-text">Status:<small [ngClass]="{'text-success':x.status === 'processed', 'text-primary':x.status === 'processing'}">{{x.status}}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

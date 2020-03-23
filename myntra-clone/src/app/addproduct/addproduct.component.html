@@ -1,0 +1,30 @@
+<div class="container">
+  <form  (ngSubmit)="addProduct()" #f="ngForm">
+    <div class="container text-center">
+      <img [src]="pimgpath.value" style="width:18rem" class="img-thumbnail my-3">
+    </div>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault01">Product Name</label>
+        <input type="text" class="form-control" id="validationDefault01" placeholder="Product name" value="Mark" required ngModel #pname="ngModel" name="name">
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault02">Product Price</label>
+        <input type="number" class="form-control" id="validationDefault02" placeholder="Product price" value="Otto" required ngModel #pprice="ngModel" name="price">
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationDefault03">Product Image Link</label>
+        <input type="text" class="form-control" id="validationDefault03" placeholder="Img path" value="Otto" required ngModel #pimgpath="ngModel" name="imgPath">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-12 mb-3">
+        <textarea class="form-control" name="description" placeholder="Add Product Description" id="validationDefault04"cols="60" rows="10" ngModel #pdesc="ngModel"></textarea>
+      </div>
+    </div>
+    <div class="row text-center my-3">
+      <button class="btn btn-outline-success w-25 mx-auto" type="submit" [disabled]="!f.valid">Add IT</button>
+    </div>
+  </form>
+</div>
+<!-- https://bit.ly/2wnDawz -->

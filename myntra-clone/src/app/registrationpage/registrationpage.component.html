@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <h1 class="display-5 text-center">New User's Registration</h1>
+</div>
+<div class="container" *ngIf="msg.validity">
+    <div class="alert" [ngClass]="msg.type" role="alert">
+        {{msg.msg}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="msg.validity = false;">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+<div class="container">
+    <form (ngSubmit)="onSubmit()"  #f="ngForm">
+        <div class="form-row">
+            <div class="col-md-3 mb-3">
+                <label for="validationDefault01">First name</label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="First name" value="Mark" required ngModel #fname="ngModel" name="userFirstName">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationDefault02">Last name</label>
+                <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" value="Otto" required ngModel #lname="ngModel" name="userLastName">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationDefault07">Password</label>
+                <input type="password" class="form-control" id="validationDefault07" required ngModel #pass="ngModel" name="password">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationDefaultUseremail">Email</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="validationDefaultUseremail" placeholder="Email" aria-describedby="inputGroupPrepend2" required ngModel #email="ngModel" email name="userEmail">
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 mb-3">
+                <label for="validationDefault03">City</label>
+                <input type="text" class="form-control" id="validationDefault03" placeholder="City" required ngModel #cityName="ngModel" name="userCity">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationDefault06">Mobile</label>
+                <input type="text" class="form-control" id="validationDefault06" placeholder="Mobile" required ngModel #mobile="ngModel" name="userMobile">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationDefault04">State</label>
+                <input type="text" class="form-control" id="validationDefault04" placeholder="State" required ngModel #stateName="ngModel" name="userState">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationDefault05">Zip</label>
+                <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required ngModel #zipCode="ngModel" name="zipcode">
+            </div>
+        </div>
+        <div class="row text-center my-3">
+            <button class="btn btn-outline-success w-25 mx-auto" type="submit" [disabled]="!f.valid">Register</button>
+        </div>
+    </form>
+</div>
+

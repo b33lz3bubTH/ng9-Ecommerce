@@ -1,0 +1,27 @@
+<div class="container pt-3">
+  <div class="row justify-content-sm-center my-5">
+    <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6">
+      <div class="card border-info">
+        <div class="card-header text-center">Sign In</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <form (ngSubmit)="loginSubmit()" class="form-signin text-center" #f="ngForm">
+                <div class="form-group" ngModelGroup="userData">
+                  <input name="email" email type="text" class="form-control mx-auto w-75" placeholder="Email" required ngModel #email="ngModel">
+                  <br>
+                  <input name="password" ngModel #pass="ngModel" type="password" class="form-control mx-auto w-75" placeholder="Password" required>
+                </div>
+                <hr class="w-50">
+                <button class="btn btn-lg btn-primary btn-block mx-auto w-75" type="submit"
+                  [disabled]="!(email.valid && pass.valid)"
+                >Sign in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

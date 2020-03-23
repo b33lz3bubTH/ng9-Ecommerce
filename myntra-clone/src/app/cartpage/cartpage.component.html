@@ -1,0 +1,30 @@
+<div class="container text-center">
+  <p class="display-4">Your Cart has {{ cartObj.cartDB.length }} item</p>
+</div>
+<div class="container text-center">
+  <button class="btn btn-outline-warning" routerLink="/place-order" *ngIf="cartObj.cartDB.length && userObj.isLogged">Proceed For Payment</button>
+</div>
+<hr class="w-75">
+<br>
+<div class="container w-75">
+  <div class="row mb-2 mt-1" *ngFor="let x of cartObj.cartDB; let i = index">
+    <div class="col-md-2">
+      <div class="d-flex h-75 align-items-center justify-content-center">
+        <h2>{{ '[' + (i+1) + ']'  }}</h2>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+      <img class="card-img-top img-thumbnail" [src]="x.prod.imgPath">
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+      <h4 class="card-title">Name: {{ x.prod.name }}</h4>
+      <h4 class="card-title">Price: {{ x.prod.price | currency:'INR':'symbol-narrow' }}</h4>
+      <input type="number" class="form-control w-50 text-center" [(ngModel)]="x.quantity">
+      <br>
+      <button class="btn btn-outline-danger text-center w-50 form-control" (click)="removeFromCart(x.prod.id)">Remove</button>
+    </div>
+    <hr class="w-75">
+  </div>
+</div>

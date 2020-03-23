@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/" style="font-family: 'Rock Salt', cursive;">MYN-Clonex</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/cart" (click)="logCart()">
+          <span *ngIf="cartObj.sizeOfCart()" class="badge badge-secondary" style="font-size: 15px;"><i class="fas fa-shopping-cart" ></i> {{cartObj.sizeOfCart()}}</span>
+          <i *ngIf="!cartObj.sizeOfCart()" class="fas fa-shopping-cart" ></i>
+        </a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" [routerLink]="['/search','jeans']">Jeans</a>
+          <a class="dropdown-item" [routerLink]="['/search','shirt']">Shirts</a>
+          <a class="dropdown-item" [routerLink]="['/search','shoes']">Shoes</a>
+          <a class="dropdown-item" [routerLink]="['/search','wearables']">Wearables</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active" *ngIf="authServObj.isLogged">
+        <a class="nav-link" [routerLink]="['/check-users-profile']"><i class="fas fa-user"></i> Profile</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" *ngIf="!authServObj.isLogged">
+        <a class="nav-link" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+      </li>
+      <li class="nav-item" *ngIf="authServObj.isLogged">
+        <a class="nav-link" [routerLink]="['']" (click)="authServObj.logOut()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active" *ngIf="!authServObj.isLogged">
+        <a class="nav-link" [routerLink]="['/register']"><i class="fas fa-user-plus"></i> Sign up</a>
+      </li>
+    </ul>
+    <div class="form-inline">
+      <input type="text" class="form-control" placeholder="Search" #lookupfor>
+      <div class="input-group-append">
+        <button class="btn btn-success" type="submit" (click)="lookFor()"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>

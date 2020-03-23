@@ -1,0 +1,14 @@
+<br>
+<app-adbanner [adArray]="adArr"></app-adbanner>
+<hr class="w-50">
+
+<div class="container-fluid">
+    <h1 class="display-4 text-info text-center">Random Products</h1>
+    <div class="card-deck mx-auto">
+        <app-product
+        *ngFor="let x of pdb"
+        [element]="x"
+        ></app-product>
+    </div>
+</div>
+<hr class="w-50">

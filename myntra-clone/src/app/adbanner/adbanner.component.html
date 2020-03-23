@@ -1,0 +1,30 @@
+<!-- Fetch Users customs details to influence his mind to buy more stuffs. -->
+<!-- pass JS object for carousel according to users data or from ad. -->
+<div class="container">
+    <div class="carousel slide" id="carouselExampleInterval" data-ride="carousel">
+        <div class="carousel-inner text-center">
+            <div class="carousel-item"
+                *ngFor="let x of adArray; let i = index"
+                data-interval="2500"
+                [ngClass]="{'active': i==1}"
+                [ngStyle]="{'background-image': 'url(' + x.imgPath + ')'}"
+                [routerLink]="['/search', x.prodLink]"
+            >
+                <div class="d-flex h-75 align-items-center justify-content-center">
+                    <h3>{{ x.adOfferName }}</h3>
+                </div>
+                <h5 class="text-white mb-5">{{ x.adOfferDetail }}</h5>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- their will be a link to buy the ad product. like localhost/search/watch -->

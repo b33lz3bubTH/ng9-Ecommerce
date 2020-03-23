@@ -1,0 +1,9 @@
+<div class="card" style="width:21rem;margin-top:10px;">
+  <img class="card-img-top img-thumbnail" [src]="element.imgPath" alt="Card image cap">
+  <div class="card-body text-center">
+    <h5 class="card-title text-truncate">Name: {{ element.name }}</h5>
+    <p class="card-text">Price: {{ element.price | currency:'INR':'symbol-narrow' }}</p>
+    <p class="card-text text-truncate"><small class="text-muted">Desc: {{ element.description }}</small></p>
+    <button class="btn btn-md btn-outline-success w-100" (click)="addToCart(this.element)" >Add To Cart</button>
+  </div>
+</div>

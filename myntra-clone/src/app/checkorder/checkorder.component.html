@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="text-success text-center">All Orders</h1>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">User's Name</th>
+        <th scope="col">User's Email </th>
+        <th scope="col">User's Address </th>
+        <th scope="col">Phone</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let x of ordServObj.OrderArray; let i = index" 
+      [ngClass]="{'bg-success':x.status === 'processed','text-white':x.status === 'processed'}">
+        <th scope="row">{{i+1}}</th>
+        <td>{{x.product.name}}</td>
+        <td>{{x.product.price | currency:'INR':'symbol-narrow'}}</td>
+        <td>{{x.quantity}}</td>
+        <td>{{x.cus.name}}</td>
+        <td>{{x.cus.email}}</td>
+        <td>{{x.cus.address}}</td>
+        <td>{{x.cus.phone}}</td>
+        <td *ngIf="x.status === 'processing'">
+          <button class="btn btn-sm btn-success w-50" (click)="changeProcessedStatusToComplete(x.id)">y</button>
+        </td>
+        <td *ngIf="x.status === 'processed'">
+          <button class="btn btn-sm btn-danger w-50" (click)="changeProcessedStatusToInComplete(x.id)">x</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

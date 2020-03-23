@@ -1,0 +1,11 @@
+.carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.carousel-item h3 {
+    margin: 0;
+    color: white;
+}

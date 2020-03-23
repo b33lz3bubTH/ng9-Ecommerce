@@ -1,0 +1,18 @@
+<div class="container my-5">
+    <div class="jumbotron text-center">
+        <div class="my-5">
+            <i class="fas fa-user display-1"></i>
+            <h5 class="text-primary my-3">{{(userObj.isAdmin)?'Admin Profile':'Welcome User'}}</h5>
+        </div>
+        <h1>Name: {{userObj.name}}</h1>
+        <h3>Email: {{userObj.email}}</h3>
+    </div>
+    <div class="container text-center">
+        <a class="mx-2" [routerLink]="['/check-users-order']"><i class="fas fa-border-all"></i> My Order</a>
+        <div *ngIf="userObj.isAdmin">
+            <a class="mx-2" [routerLink]="['/admin/newproduct']"><i class="fas fa-plus"></i> Add New Product</a>
+            <a class="mx-2" [routerLink]="['/admin/checkorders']"><i class="fas fa-border-all"></i> Check Orders</a>
+        </div>
+    </div>
+</div>
+
