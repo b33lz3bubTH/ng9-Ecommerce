@@ -3,10 +3,10 @@
 ## Fashion Ecommerce Application
   Basic Features of an e-commerce site.
   ### made with
-  frontend - ANGULAR 9
-  backend - PHP REST API
-  database - mysql
-  preflight req tackled with headers.
+  ---- frontend - ANGULAR 9
+  ---- backend - PHP REST API
+  ----- database - mysql
+  ----- (preflight req tackled with headers present in api)
   
 # **myntra-clone
 
