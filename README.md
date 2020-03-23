@@ -4,7 +4,7 @@
   Basic Features of an e-commerce site.
 # **myntra-clone
 
-Images - https://imgur.com/a/qyqUcRL
+Images - https://imgur.com/a/qyqUcRL && Video - https://www.youtube.com/watch?v=CUs91cSaXTM
 
 # dev notes. [as of march]
   1. apis are present in v1 folder
