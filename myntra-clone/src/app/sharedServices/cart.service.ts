@@ -51,10 +51,18 @@ export class CartService {
     else
       console.log("NO Data in cart");
   }
-  placeTheOrders(odObj: OrderData){
+  placeTheOrders(odObj: OrderData) {
     return this.http.post('http://localhost/v1/place_order.php', odObj, {
             headers: new HttpHeaders({'Content-Type': 'application/json'}),
             params: new HttpParams().set('jwt',this.userObj._token)
           });
+  }
+  inCart(id) {
+    for (const [i, v] of this.cartDB.entries()) {
+      if (v.prod.id === id) {
+        return true;
+      }
+    }
+    return false;
   }
 }
