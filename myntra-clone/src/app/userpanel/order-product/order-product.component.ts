@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {OrderData, OrderProdDesc} from './order.model';
-import { UserAuthService } from '../sharedServices/user.auth.service';
-import { CartService } from '../sharedServices/cart.service';
+import { UserAuthService } from '../../sharedServices/user.auth.service';
+import { CartService } from '../../sharedServices/cart.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-order-product',

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { RegistrationService, UserDataModule } from '../sharedServices/registration.service';
-import { AlertBox } from '../sharedServices/alert.model';
+import { RegistrationService, UserDataModule } from '../../sharedServices/registration.service';
+import { AlertBox } from '../../sharedServices/alert.model';
 @Component({
   selector: 'app-registrationpage',
   templateUrl: './registrationpage.component.html',

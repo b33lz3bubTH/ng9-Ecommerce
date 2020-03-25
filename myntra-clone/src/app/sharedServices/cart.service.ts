@@ -1,5 +1,5 @@
 import {Product} from '../product/product.model';
-import {OrderData} from '../order-product/order.model';
+import {OrderData} from '../userpanel/order-product/order.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { UserAuthService } from './user.auth.service';

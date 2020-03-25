@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import { UserAuthService } from '../sharedServices/user.auth.service';
+import { UserAuthService } from '../../sharedServices/user.auth.service';
 import { Router } from '@angular/router';
 
 @Component({

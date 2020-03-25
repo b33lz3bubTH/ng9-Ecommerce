@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserAuthService } from '../sharedServices/user.auth.service';
-import { OrdersServiceForUser } from '../sharedServices/users.order.service';
+import { UserAuthService } from '../../sharedServices/user.auth.service';
+import { OrdersServiceForUser } from '../../sharedServices/users.order.service';
 class AllOrdersX{
   id: number;
   status: string;

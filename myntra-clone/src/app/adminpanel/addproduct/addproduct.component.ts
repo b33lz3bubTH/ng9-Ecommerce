@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import { ProductsService } from '../sharedServices/products.service';
+import { ProductsService } from '../../sharedServices/products.service';
 
 @Component({
   selector: 'app-addproduct',

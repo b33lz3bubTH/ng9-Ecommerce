@@ -22,7 +22,7 @@
           <a class="dropdown-item" [routerLink]="['/search','jeans']">Jeans</a>
           <a class="dropdown-item" [routerLink]="['/search','shirt']">Shirts</a>
           <a class="dropdown-item" [routerLink]="['/search','shoes']">Shoes</a>
-          <a class="dropdown-item" [routerLink]="['/search','wearables']">Wearables</a>
+          <a class="dropdown-item" [routerLink]="['/search','watch']">Wearables</a>
         </div>
       </li>
     </ul>
@@ -31,14 +31,14 @@
         <a class="nav-link" [routerLink]="['/check-users-profile']"><i class="fas fa-user"></i> Profile</a>
       </li>
       <li class="nav-item" routerLinkActive="active" *ngIf="!authServObj.isLogged">
-        <a class="nav-link" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+        <a class="nav-link" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Login</a>
       </li>
       <li class="nav-item" *ngIf="authServObj.isLogged">
         <a class="nav-link" [routerLink]="['']" (click)="authServObj.logOut()"><i class="fas fa-sign-out-alt"></i> Logout</a>
       </li>
 
       <li class="nav-item" routerLinkActive="active" *ngIf="!authServObj.isLogged">
-        <a class="nav-link" [routerLink]="['/register']"><i class="fas fa-user-plus"></i> Sign up</a>
+        <a class="nav-link" [routerLink]="['/register']"><i class="fas fa-user-plus"></i> Register</a>
       </li>
     </ul>
     <div class="form-inline">

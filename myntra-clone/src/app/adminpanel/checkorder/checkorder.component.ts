@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {OrdersService} from '../sharedServices/orders.service';
+import {OrdersService} from '../../sharedServices/orders.service';
 
 @Component({
   selector: 'app-checkorder',
