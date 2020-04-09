@@ -27,6 +27,6 @@ Images - https://imgur.com/a/qyqUcRL && Video - https://www.youtube.com/watch?v=
   2. UI/UX fixes
   3. ERROR MSG display(not done)
   4. password reset for users
-  5. ML implementation for influencing users to buy similar items that they searched for.
+  5. ML implementation for influencing users to buy similar items that they searched for. as of now did it [https://github.com/b33lz3bubTH/recommendation-product]
   
   I am a ignou student (173785385)(Sourav)
