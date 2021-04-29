@@ -30,3 +30,6 @@ Images - https://imgur.com/a/qyqUcRL && Video - https://www.youtube.com/watch?v=
   5. ML implementation for influencing users to buy similar items that they searched for. as of now did it [https://github.com/b33lz3bubTH/recommendation-product]
   
   I am a ignou student (173785385)(Sourav)
+
+
+# GOING SUPER BUSY, cant maintain this.
